@@ -1,13 +1,8 @@
 {
-  "name": "try-pnpm",
+  "name": "myapp",
   "version": "1.0.0",
-  "description": "pnpmを試してみよう",
+  "description": "",
   "main": "index.js",
-  "engines": {
-    "npm": "forbidden, use pnpm",
-    "pnpm": ">=6",
-    "yarn": "forbidden, use pnpm"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,14 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/toshick/try-pnpm.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/toshick/try-pnpm/issues"
   },
-  "homepage": "https://github.com/toshick/try-pnpm#readme",
-  "workspaces": [
-    "packages/myapp",
-    "packages/backend"
-  ]
+  "homepage": "https://github.com/toshick/try-pnpm#readme"
 }
