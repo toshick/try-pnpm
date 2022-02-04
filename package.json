@@ -1,0 +1,19 @@
+{
+  "name": "try-pnpm",
+  "version": "1.0.0",
+  "description": "pnpmを試してみよう",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toshick/try-pnpm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toshick/try-pnpm/issues"
+  },
+  "homepage": "https://github.com/toshick/try-pnpm#readme"
+}
