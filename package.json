@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "pnpmを試してみよう",
   "main": "index.js",
+  "engines": {
+    "npm": "forbidden, use pnpm",
+    "pnpm": ">=6",
+    "yarn": "forbidden, use pnpm"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
