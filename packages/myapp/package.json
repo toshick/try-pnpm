@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/toshick/try-pnpm/issues"
   },
-  "homepage": "https://github.com/toshick/try-pnpm#readme"
+  "homepage": "https://github.com/toshick/try-pnpm#readme",
+  "dependencies": {
+    "vite": "^2.7.13"
+  }
 }

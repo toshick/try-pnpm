@@ -31,9 +31,16 @@ pnpm-lock.yaml
 - パッケージ解決をスキップしインストールを短縮する
 - package-lock.jsonと同じようにバージョンを固定する
 
-## Add package
+## Add workspace
 
 ```
+// backendというworkspaceをpackagesディレクトリに作成しpackage.jsonも保存する
+pnpm init -w packages/myapp -y
+
+// workspaceを指定して実行（myappのnpmScript "nyao"をコール）
+pnpm run nyao --filter myapp
+// workspace"myapp"に指定パッケージをインストール
+pnpm i vite@latest --filter myapp
 ```
 
 ## Other command memo
