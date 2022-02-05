@@ -6,15 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/toshick/try-pnpm.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toshick/try-pnpm/issues"
-  },
-  "homepage": "https://github.com/toshick/try-pnpm#readme"
+  "dependencies": {
+    "dayjs": "^1.10.7",
+    "uuid": "^8.3.2"
+  }
 }

@@ -4,20 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "nyao": "echo \"Nyaooo!!\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/toshick/try-pnpm.git"
+    "dev": "node app.js",
+    "sass": "sass --no-source-map sass/app.scss app.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/toshick/try-pnpm/issues"
-  },
-  "homepage": "https://github.com/toshick/try-pnpm#readme",
   "dependencies": {
-    "vite": "^2.7.13"
+    "sass": "^1.49.7"
   }
 }
