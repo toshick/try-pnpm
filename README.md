@@ -216,3 +216,20 @@ dayjs! Sat, 05 Feb 2022 05:06:43 GMT
 ------------------------------------------------------------
 ```
 
+nuxt3-app パッケージを追加してみる
+
+```
+// 以下を実行してnuxt3-appディレクトリ をpackages以下に配置する
+npx nuxi init nuxt3-app
+
+// workspacesに手動導追加
+"workspaces": [
+	"packages/myapp",
+	"packages/backend",
+	"packages/nuxt3-app" //追加
+]
+
+// pnpmからworkspaceを初期化
+pnpm init -w packages/nuxt3-app
+```
+
