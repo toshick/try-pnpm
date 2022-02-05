@@ -218,7 +218,7 @@ dayjs! Sat, 05 Feb 2022 05:06:43 GMT
 
 nuxt3-app パッケージを追加してみる
 
-```
+```bash
 // 以下を実行してnuxt3-appディレクトリ をpackages以下に配置する
 npx nuxi init nuxt3-app
 
@@ -231,5 +231,48 @@ npx nuxi init nuxt3-app
 
 // pnpmからworkspaceを初期化
 pnpm init -w packages/nuxt3-app
+
+// nuxt3-app はまだnpm installされていないので実行する
+pnpm i
+
+//エラー
+WARN  Issues with peer dependencies found
+packages/nuxt3-app
+└─┬ nuxt3
+  ├─┬ @nuxt/vite-builder-edge
+  │ ├─┬ autoprefixer
+  │ │ └── ✕ missing peer postcss@^8.1.0
+  │ ├─┬ postcss-import
+  │ │ └── ✕ missing peer postcss@^8.0.0
+  │ ├─┬ postcss-url
+  │ │ └── ✕ missing peer postcss@^8.0.0
+  │ ├─┬ rollup-plugin-visualizer
+  │ │ └── ✕ missing peer rollup@^2.0.0
+  │ └─┬ unplugin
+  │   └── ✕ missing peer rollup@^2.50.0
+  ├─┬ @nuxt/webpack-builder-edge
+  │ └─┬ unplugin
+  │   └── ✕ missing peer rollup@^2.50.0
+  └─┬ unplugin
+    └── ✕ missing peer rollup@^2.50.0
+Peer dependencies that should be installed:
+  postcss@">=8.1.0 <9.0.0"  rollup@">=2.50.0 <3.0.0"
 ```
 
+missing peerエラーが出るので直接ディレクトリでnpm installする
+
+```
+cd packages/nuxt3-app
+npm install
+
+added 809 packages, and audited 810 packages in 37s
+
+121 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+```
+
+これだと pnpm insall だけでは全体のmoduleインストールが不可能になってしまった。
+
+今のところあきらめる。

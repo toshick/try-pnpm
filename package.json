@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "link": "cd packages/myapp && pnpm link ../backend",
+    "install": "pnpm install",
+    "link": "cd packages/myapp && pnpm link ../backend && cd ../nuxt3-app && pnpm link ../myapp",
     "dev": "pnpm run dev --filter myapp",
     "nuxt": "pnpm run dev --filter nuxt3-app"
   },
