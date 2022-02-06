@@ -1,10 +1,10 @@
 {
-  "name": "photock2",
+  "name": "try-pnpm",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "install": "pnpm install",
-    "link": "cd packages/myapp && pnpm link ../backend && cd ../nuxt3-app && pnpm link ../myapp",
+    "i": "pnpm install && cd packages/nuxt3-app && npm ci && pnpm link ../myapp",
+    "link": "cd packages/myapp && pnpm link ../backend",
     "dev": "pnpm run dev --filter myapp",
     "nuxt": "pnpm run dev --filter nuxt3-app"
   },
