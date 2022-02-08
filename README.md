@@ -272,42 +272,33 @@ Peer dependencies that should be installed:
   postcss@">=8.1.0 <9.0.0"  rollup@">=2.50.0 <3.0.0"
 ```
 
-missing peerエラーが出るので直接ディレクトリでnpm installする
+missing peerエラーが出る
 
-```bash
-cd packages/nuxt3-app
-npm install
+[missing peer dependencies after installation of pnpm v6.24.4](https://github.com/pnpm/pnpm/issues/4183)
 
-added 809 packages, and audited 810 packages in 37s
 
-121 packages are looking for funding
-  run `npm fund` for details
 
-found 0 vulnerabilities
-```
-
-これだと pnpm insall だけでは全体のmoduleインストールが不可能になってしまった。
-
-仕方がないのでCI等での一括インストールはnpmScriptを用意することにした。
+これを解決するために以下を実行してみた
 
 ```
-"scripts": {
-	"i": "pnpm install && cd packages/nuxt3-app && npm ci && pnpm link ../myapp",
-},
+pnpm add -w app postcss@^8.1.0
 ```
 
-linkも実行し、nuxtアプリケーションから別パッケージのcssをインポートすることができた
 
-```vue
-// app.vue
-<template>
-  <div>なくすとさまですよ</div>
-  <p>myapp/app.css をインポートしています....</p>
-</template>
-<script>
-  import 'myapp/app.css';
-</script>
+
+が、ビルドエラーが発生する。既知のエラーのようだ。
+
 ```
+Cannot find package 'unenv' imported from /path/to/project/.nuxt/nitro/index.mjs
+```
+
+
+
+ここで議論されているが、将来nuxt3でもpnpm対応が行われる可能性はある
+
+https://github.com/nuxt/framework/issues/581
+
+
 
 
 
