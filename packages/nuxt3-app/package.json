@@ -5,8 +5,9 @@
     "build": "nuxi build",
     "start": "node .output/server/index.mjs"
   },
-  "devDependencies": {
-    "nuxt3": "latest"
+  "dependencies": {
+    "nuxt3": "3.0.0-27405808.7825e2a",
+    "myapp": "workspace:myapp@*"
   },
   "name": "nuxt3-app",
   "description": "We recommend to look at the [documentation](https://v3.nuxtjs.org).",
